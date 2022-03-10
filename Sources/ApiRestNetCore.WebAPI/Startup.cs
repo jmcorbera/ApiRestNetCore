@@ -4,7 +4,6 @@ using ApiRestNetCore.DataAccess;
 using ApiRestNetCore.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,11 +33,6 @@ namespace ApiRestNetCore.WebAPI
             services.AddScoped(typeof(IApplication<>), typeof(Application<>));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddSingleton(typeof(IDbContext<>), typeof(DbContextList<>));
-
-            //services.AddDbContext<EFDBContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("dbConnection"), b => b.MigrationsAssembly("ApiRestNetCore.WebAPI")));
-
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<EFDBContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,8 +52,6 @@ namespace ApiRestNetCore.WebAPI
             app.UseAuthorization();
 
             app.UseAuthentication();
-
-            //app.UseCors("Open");
 
             app.UseEndpoints(endpoints =>
             {

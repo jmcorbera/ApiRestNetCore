@@ -11,9 +11,9 @@ namespace ApiRestNetCore.WebAPI.Controllers
     public class ApiRestNetCoreController : ControllerBase
     {
         private readonly ILogger<ApiRestNetCoreController> _logger;
-        private readonly IApplication<Persona> _persona;
+        private readonly IApplication<Person> _persona;
 
-        public ApiRestNetCoreController(ILogger<ApiRestNetCoreController> logger, IApplication<Persona> persona)
+        public ApiRestNetCoreController(ILogger<ApiRestNetCoreController> logger, IApplication<Person> persona)
         {
             this._logger = logger;
             this._persona = persona;
@@ -26,13 +26,13 @@ namespace ApiRestNetCore.WebAPI.Controllers
         }
 
         [HttpPost("GuardarPersona")]
-        public IActionResult SavePerson(PersonaDTO dto)
+        public IActionResult SavePerson(PersonDTO dto)
         {
-            var p = (new Persona()
+            var p = (new Person()
             {
                 Id = dto.Id,
-                Nombre = dto.Nombre,
-                Apellido = dto.Apellido
+                FirstName = dto.FirstName,
+                LastName = dto.LastName
             });
 
             return Ok(_persona.Save(p));
