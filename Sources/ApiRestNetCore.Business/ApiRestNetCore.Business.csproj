@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CPClubService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiRestNetCore.Abstractions\ApiRestNetCore.Abstractions.csproj" />
+    <ProjectReference Include="..\ApiRestNetCore.Repository\ApiRestNetCore.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

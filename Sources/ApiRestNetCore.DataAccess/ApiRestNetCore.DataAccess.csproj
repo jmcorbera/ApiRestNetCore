@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataAccess.cs" />
+    <Compile Remove="DbContext.cs" />
+    <Compile Remove="EFDBContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiRestNetCore.Entities\ApiRestNetCore.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

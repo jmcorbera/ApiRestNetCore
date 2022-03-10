@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTOs\RegisterUserRequestDTO.cs" />
+    <Compile Remove="DTOs\UserLoginRequestDTO.cs" />
+    <Compile Remove="DTOs\UserLoginResponseDTO.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiRestNetCore.Business\ApiRestNetCore.Business.csproj" />
+    <ProjectReference Include="..\ApiRestNetCore.DataAccess\ApiRestNetCore.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
