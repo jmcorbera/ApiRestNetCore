@@ -1,6 +1,6 @@
 # Api Rest .Net Core
 
-This repository contains the implementation of a REST API in .NET 5 with a layered architecture and Net Core dependency injection. This example with its layered architecture serves as the basis for the development of API REST services.
+This repository contains the implementation of a API REST in .NET 5 with a layered architecture and Net Core dependency injection. This example with its layered architecture serves as the basis for the development of API REST services.
 
 <h3 align="left">Languages and Tools:</h3>  
 
