@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ApiRestNetCore.Business\ApiRestNetCore.Business.csproj" />
     <ProjectReference Include="..\ApiRestNetCore.DataAccess\ApiRestNetCore.DataAccess.csproj" />
+    <ProjectReference Include="..\ApiRestNetCore.Repository\ApiRestNetCore.Repository.csproj" />
   </ItemGroup>
 
 </Project>

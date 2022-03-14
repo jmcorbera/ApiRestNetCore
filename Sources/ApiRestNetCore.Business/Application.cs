@@ -1,5 +1,4 @@
 ﻿using ApiRestNetCore.Abstractions;
-using ApiRestNetCore.Repository;
 using System.Collections.Generic;
 
 namespace ApiRestNetCore.Business
